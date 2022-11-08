@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: sans-serif;
+}
+
+/*body{
+    height: 100%;
+}*/
+
+.notes{
+    display: flex;
+    height: 100%;
+}
+
+.notes-sidebar{
+    border-right: 2px solid #ddd;
+    padding: 1em;
+    width: 300px;
+    flex-shrink: 0;
+    overflow-y: auto;
+}
+
+.add-notes{
+    background: #009578;
+    border: none;
+    border-radius: 7px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-bottom: 1em;
+    padding: 0.75em 0;
+    width: 100%;
+}
+
+.add-notes:hover{
+    background: #00af8c;
+}
+
+.notes-list{
+    cursor: pointer;
+    color: rgb(87, 86, 86);
+}
+
+.notes-list:hover{
+    background: rgb(227, 226, 226);
+    border-radius: 7px;
+}
+
+/*.notes-list--selected{
+    background: #eee;
+    border-radius: 7px;
+    font-weight: bold;
+}*/
+
+.notes-title,
+.notes-date{
+    padding: 10px;
+}
+
+.notes-title{
+    font-size: 1.2em;
+}
+
+.notes-body{
+    padding: 0 10px;
+}
+
+.bottom-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+}
+
+/*.bottom-content span{
+    color: #6d6d6d;
+    font-size: 14px;
+}*/
+
+.bottom-content .settings{
+    position: relative;
+}
+
+.bottom-content .settings i{
+    color: #6d6d6d;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.settings .menu{
+    z-index: 1;
+    bottom: 0;
+    right: -5px;
+    padding: 5px 0;
+    background: #fff;
+    position: absolute;
+    border-radius: 4px;
+    transform: scale(0);
+    transform-origin: bottom right;
+    box-shadow: 0 0 6px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease;
+}
+
+.settings:hover .menu{
+    transform: scale(1);
+}
+
+.settings .menu li{
+    height: 25px;
+    font-size: 16px;
+    margin-bottom: 2px;
+    padding: 17px 15px;
+    cursor: pointer;
+    box-shadow: none;
+    border-radius: 0;
+    justify-content: flex-start;
+    list-style: none;
+}
+
+.menu li:last-child{
+    margin-bottom: 0;
+}
+
+.menu li:hover{
+    background: #f5f5f5;
+}
+
+.menu li i{
+    padding-right: 8px;
+}
+
+.enter-notes{
+    display: flex;
+    flex-direction: column;
+    padding: 2em 3em;
+    flex-grow: 1;
+}
+
+.title,
+.body{
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.title{
+    font-size: 3em;
+    color: rgb(92, 92, 92);
+    font-weight: bold;
+}
+
+.body{
+    flex-grow: 1;
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-top: 2em;
+    resize: none;
+    color: rgb(87, 86, 86);
+}

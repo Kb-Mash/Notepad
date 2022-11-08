@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notepad</title>
+
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css" integrity="sha384-z4tVnCr80ZcL0iufVdGQSUzNvJsKjEtqYZjiQrrYKlpGow+btDHDfQWkFjoaz/Zr" crossorigin="anonymous">
+</head>
+<body>
+    <div class="notes">
+        <div class="notes-sidebar">
+            <button class="add-notes">Add Note</button>
+            <div class="notes-list">
+                <div class="notes-title">Lecture notes</div>
+                <div class="notes-body">My notes for today</div>
+                <div class="bottom-content">
+                    <div class="notes-date">Tuesday 09:56</div>
+                    <div class="settings">
+                        <i class="fa fa-ellipsis-h"></i>
+                        <ul class="menu">
+                            <li><i class="fa fa-pencil"> edit</i></li>
+                            <li><i class="fa fa-trash"> delete</i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="enter-notes">
+            <input type="text" class="title" placeholder="Enter a title...">
+            <textarea class="body" spellcheck="false" placeholder="Notes for today..."></textarea>
+        </div>
+    </div>
+
+
+    <script src="src/script.js"></script>
+</body>
+</html>
