@@ -6,10 +6,6 @@
     font-family: sans-serif;
 }
 
-/*body{
-    height: 100%;
-}*/
-
 .notes{
     display: flex;
     height: 100%;
@@ -40,32 +36,26 @@
     background: #00af8c;
 }
 
-.notes-list{
+.note{
     cursor: pointer;
     color: rgb(87, 86, 86);
 }
 
-.notes-list:hover{
+.note:hover{
     background: rgb(227, 226, 226);
     border-radius: 7px;
 }
 
-/*.notes-list--selected{
-    background: #eee;
-    border-radius: 7px;
-    font-weight: bold;
-}*/
-
-.notes-title,
-.notes-date{
+.note-title,
+.note-date{
     padding: 10px;
 }
 
-.notes-title{
+.note-title{
     font-size: 1.2em;
 }
 
-.notes-body{
+.note-body{
     padding: 0 10px;
 }
 
@@ -74,65 +64,42 @@
     align-items: center;
     justify-content: space-between;
 
-    padding-top: 10px;
-    border-top: 1px solid #ccc;
+    margin-top: 10px;
+    border-top: 1px dashed #ccc;
 }
 
-/*.bottom-content span{
+.bottom-content .note-date{
     color: #6d6d6d;
     font-size: 14px;
-}*/
+}
 
 .bottom-content .settings{
     position: relative;
+    margin-right: 5px;
+   
 }
 
-.bottom-content .settings i{
+.bottom-content .settings button{
+    width: 50px;
     color: #6d6d6d;
     font-size: 15px;
     cursor: pointer;
+
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    background: none;
+    padding: 0.3em;
 }
 
-.settings .menu{
-    z-index: 1;
-    bottom: 0;
-    right: -5px;
-    padding: 5px 0;
-    background: #fff;
-    position: absolute;
-    border-radius: 4px;
-    transform: scale(0);
-    transform-origin: bottom right;
-    box-shadow: 0 0 6px rgba(0,0,0,0.15);
-    transition: transform 0.2s ease;
+.settings .edit:hover{
+    background: pink;
+    color: rgb(29, 29, 29);
 }
 
-.settings:hover .menu{
-    transform: scale(1);
-}
-
-.settings .menu li{
-    height: 25px;
-    font-size: 16px;
-    margin-bottom: 2px;
-    padding: 17px 15px;
-    cursor: pointer;
-    box-shadow: none;
-    border-radius: 0;
-    justify-content: flex-start;
-    list-style: none;
-}
-
-.menu li:last-child{
-    margin-bottom: 0;
-}
-
-.menu li:hover{
-    background: #f5f5f5;
-}
-
-.menu li i{
-    padding-right: 8px;
+.settings .delete:hover{
+    background-color: crimson;
+    color: #fff;
 }
 
 .enter-notes{
